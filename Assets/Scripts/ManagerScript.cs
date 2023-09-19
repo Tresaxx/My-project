@@ -7,15 +7,20 @@ public class ManagerScript : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject cannon;
+    public GameObject tank;
     private float bulletSpeed = 5.0f;
-    
+    public const float MAXMOVEMENT = 100;
+    public bool moving = false;
+    public float movDirection;
+    public string tankAxis;
     public GameObject cursor;
     private Vector3 mouseVector;
     private Vector3 target;
+
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -34,6 +39,7 @@ public class ManagerScript : MonoBehaviour
             direction.Normalize();
             FirebBullet(direction, cannon.GetComponent<CannonScript>().angle);
         }
+
     }
     void FirebBullet(Vector2 Direction, float rotationZ)
     {

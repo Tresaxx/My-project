@@ -328,6 +328,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1341494059415351492, guid: eb35843e1f3245648b15ee23594ba8c1, type: 3}
   cannon: {fileID: 486540321}
+  tank: {fileID: 1471225471}
+  moving: 0
+  movDirection: 0
+  tankAxis: 
   cursor: {fileID: 1441475444}
 --- !u!1 &1441475444
 GameObject:
@@ -423,6 +427,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1471225473}
   - component: {fileID: 1471225472}
+  - component: {fileID: 1471225474}
+  - component: {fileID: 1471225475}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -498,6 +504,46 @@ Transform:
   - {fileID: 486540324}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!50 &1471225474
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471225471}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1471225475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471225471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d0bc3083a34e34eb9fe846d63c73ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
 --- !u!1 &2069583460
 GameObject:
   m_ObjectHideFlags: 0
